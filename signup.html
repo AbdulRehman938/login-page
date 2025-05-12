@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <meta name="description" content="Sign up page for the application.">
+  <meta name="author" content="Abdul Rehman">
+  <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div class="left">
+      <div class="left-cont1"></div>
+      <div class="left-cont2"></div>
+      <img src="img/young man with laptop computer working at home office.svg" alt="sign-up-img" class="left-img">
+    </div>
+    <div class="right">
+      <h2>Sign-up</h2>
+      <h1>Create Account</h1>
+      <div class="inputs">
+        <label for="email" class="label-email">Email</label>
+        <input type="text" required class="email" placeholder="email@gmail.com">
+
+        <label for="contact" class="label-contact" style="width: 20%;">Phone no</label>
+        <input type="text" required class="contact" placeholder="Enter your phone no.">
+
+        <label for="password" class="label-password" style="width: 20%;">Password</label>
+        <input type="password" required class="password" placeholder="Enter your password">
+        <img src="img/eye-closed.svg" alt="closed-eyes" class="eye2" height="30px" width="auto">
+      </div>
+      <span><a href="#" class="create">Create Account</a></span>
+      <p class="or">- or -</p>
+      <p class="sign-in">Already have an account?
+        <a href="./index.html" class="link-signin">Sign in</a>
+      </p>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      let eye = document.querySelector('.eye2');
+      let password = document.querySelector('.password');
+
+      eye.addEventListener("click", function(e) {
+        e.preventDefault();
+        if (password.type === "password") {
+          password.type = "text";
+          eye.src = "img/eye-open.svg";
+          eye.alt = "open-eyes";
+        } else {
+          password.type = "password";
+          eye.src = "img/eye-closed.svg";
+          eye.alt = "closed-eyes";
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

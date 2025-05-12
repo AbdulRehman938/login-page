@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    background-color: #fcf5ef;
+    height: 100vh;
+    overflow: hidden;
+
+    .left {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        transform: translateX(-0vw);
+        width: 30%;
+
+        .left-img {
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .left-cont1 {
+            display: flex;
+            flex-wrap: wrap;
+            height: 70vh;
+            width: 30vw;
+            background-color: #FCE2CE;
+            position: absolute;
+            transform: translate(-2vw, 16.5vh);
+            z-index: 0;
+        }
+
+        .left-cont2 {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #FCE2CE;
+            width: 30vw;
+            position: absolute;
+            z-index: 0;
+            height: 50vh;
+            transform: translate(-2vw, -10vh);
+            border-radius: 50%;
+        }
+    }
+
+    .right {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        transform: translate(-2vw, 1vh);
+
+        h1 {
+            display: flex;
+            flex-wrap: wrap;
+            transform: translate(0, -8vh);
+            font-size: 4rem;
+        }
+
+        .inputs {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1vh;
+            transform: translate(0, -2vh);
+        }
+
+        .email, .contact, .password {
+            padding: 1rem 2rem;
+            width: 30vw;
+            margin: auto;
+            border: 2px solid #757575;
+            border-radius: 5rem;
+            font-size: 1.2rem;
+            background-color: transparent;
+            color: black;
+            margin: 0;
+            cursor: pointer;
+        }
+
+        .email:hover, .contact:hover, .password:hover {
+            border-color: #000;
+        }
+
+        h2 {
+            display: none;
+        }
+        
+        .label-email, .label-contact, .label-password {
+            background-color: #fcf5ef;
+            display: inline-block;
+            width: 15%;
+            transform: translate(3vw, 2vh);
+            font-size: 1.5rem;
+            color: #757575;
+            position: relative;
+            z-index: 99;
+        }
+
+        .eye2 {
+            position: relative;
+            transform: translate(27vw, -5.5vh);
+            cursor: pointer;
+            z-index: 100;
+            display: inline-block;
+            width: 2rem;
+        }
+
+        .create {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 1.5rem 2rem;
+            width: 30vw;
+            border-radius: 5rem;
+            transform: translate(0, 2vh);
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            background-color: #FCE2CE;
+            border-color: transparent;
+            color: #92613A;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .create:hover {
+            background-color: #92613A;
+            color: #FCE2CE;
+            border-color: transparent;
+            font-size: 3rem;
+        }
+
+        .or {
+            display: flex;
+            flex-wrap: wrap;
+            width: 5rem;
+            font-size: 1.5rem;
+            transform: translate(0, 6vh);
+            color: #5539229a;
+            font-weight: 600;
+        }
+
+        .sign-in {
+            display: flex;
+            flex-wrap: wrap;
+            transform: translate(0, 10vh);
+            font-size: 1.5rem;
+            color: #55392285;
+            font-weight: 600;
+        }
+
+        .link-signin {
+            text-decoration: none;
+            color: #92613A;
+            font-size: 1.7rem;
+            transform: translate(0.4rem, -0.2rem);
+        }
+        
+    }
+}
+
+@media (max-width: 425px) {
+    .wrapper {
+        flex-direction: column;
+        height: 100%;
+        overflow-y: hidden;
+        
+        .left {
+           width: 100%;
+           overflow: visible; 
+           transform: translate(0, -8rem);
+
+           .left-img {
+            max-width: 80%;
+            transform: translate(4rem, 10rem);
+            position: absolute;
+           }
+
+            .left-cont1 {
+                display: none;
+            }
+
+            .left-cont2 {
+                width: 110%;
+                transform: translate(-1rem, -1rem);
+            }
+        }
+        .right {
+            transform: translate(0, 20rem);
+            width: 100%;
+            height: 100vh;
+
+
+            h1 {
+                display: none;
+            }
+
+            h2 {
+                font-size: 5rem;
+                display: flex;
+                flex-wrap: wrap;
+                transform: translate(0rem, -28rem);
+                position: relative;
+                z-index: 1;
+            }
+
+            .inputs {
+                transform: translate(0, -17rem);
+                width: 100%;
+            }
+
+            .email, .contact, .password {
+                transform: translate(1rem, 0rem);
+                width: 90%;
+                font-size: 1rem;
+                margin-top: 0rem;
+            }
+
+            .label-email, .label-contact, .label-password {
+                margin: 0;
+                transform: translate(3rem, 1.5rem);
+                width: 25% !important;
+            }
+
+            .label-email {
+                width: 20% !important;
+            }
+
+            .eye2 {
+                width: 1.5rem;
+                transform: translate(22rem, -3.5rem);
+            }
+
+            .create {
+                width: 95vw;
+                transform: translate(0rem, -15rem);
+                padding: 1.3rem 2rem;
+            }
+
+            .or {
+                transform: translate(1rem, -13rem);
+                font-size: 1.2rem;
+            }
+
+            .sign-in {
+               transform: translate(0rem, -11rem);
+                font-size: 1.2rem;
+            }
+
+            .link-signin {
+                transform: translate(0.4rem, -0.3rem);
+            }
+        }
+    }
+}

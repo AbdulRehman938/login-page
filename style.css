@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* Importing Google Font named "Rubik" */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: #fcf5ef;
+    overflow: hidden;
+    font-family: "Roboto", sans-serif;
+}
+
+.header {
+    background-color: #fcf5ef;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 0;
+    overflow: hidden;
+    height: 100vh;
+    margin: 0;
+}
+
+.left {
+    margin-top: -10vh;
+
+    h1 {
+        font-size: 3.5rem;
+        position: relative;
+        transform: translate(15vw, -15vh);
+    }
+
+    .label-email,
+    .label-password {
+        position: absolute;
+        background-color: #fcf5ef;
+        display: block;
+        width: 4vw;
+        font-size: 1.3rem;
+        color: #464341;
+        font-weight: 500;
+        padding-left: 0.7rem;
+        z-index: 99;
+        transform: translate(12vw, -7vh);
+    }
+
+    .label-password {
+        position: absolute;
+       transform: translate(12vw, 8vh);
+        width: 6vw;
+    }
+
+    .inputs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        gap: 8vh;
+        position: relative;
+        transform: translate(5vw, -5vh);
+
+        .password,
+        .email {
+            padding: 2vh 6vw;
+            padding-left: 4vw;
+            width: 30vw;
+            margin-left: 5vw;
+            background-color: transparent;
+            border: 2px solid #000;
+            border-radius: 3vw;
+            font-size: 1.2rem;
+        }
+
+        .email {
+            background-image: url(./img/mail-02\ -\ 24px.svg);
+            background-repeat: no-repeat;
+            background-position: 2vw center;
+            padding-right: -2vw;
+        }
+
+        .password {
+            background-image: url(./img/lock-password\ -\ 24px.svg);
+            background-repeat: no-repeat;
+            background-position: 2vw center;
+            padding-right: -2vw;
+        }
+    }
+
+    .error-message {
+        color: red;
+        font-size: 1.3rem;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        /* visibility: hidden; */
+        transform: translate(2vw, -2.5vh);
+        text-align: left;
+        font-weight: 500;
+    }
+
+    .error-message:last-child {
+        color: red;
+        font-size: 1.3rem;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        /* visibility: hidden; */
+        transform: translate(2vw, 12vh);
+        text-align: left;
+        font-weight: 500;
+    }
+
+    .eye {
+        position: absolute;
+        transform: translate(37vw, 11.5vh);
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    .forgot-link {
+        text-decoration: none;
+        color: #464341;
+        font-weight: 500;
+        font-size: 1.5rem;
+        /* transform: translate(50vw, -10vh); */
+
+        :active {
+            color: #000;
+        }
+    }
+
+    .forgot-div {
+        transform: translate(30vw, -2vh);
+    }
+
+    .forgot-link:hover {
+        color: #000;
+    }
+
+    button {
+        position: relative;
+        transform: translate(7vw, 5vh);
+        padding: 2vh 4vw;
+        width: 35vw;
+        font-size: 2rem;
+        font-weight: 700;
+        border-color: transparent;
+        border-radius: 3vw;
+        background-color: #FCE2CE;
+        color: #92613A;
+    }
+
+    button:hover {
+        background-color: #f7c59c;
+        color: #f79b56;
+        transition: all 0.5s ease;
+        cursor: pointer;
+    }
+
+    .or {
+        position: relative;
+        top: 7vh;
+        left: 22.5vw;
+        font-size: 1.5rem;
+        color: #46434191;
+        font-weight: 500;
+    }
+
+    .social-links {
+        position: relative;
+        top: 10vh;
+        left: 18.5vw;
+        display: flex;
+        gap: 3vw;
+    }
+
+    .no-account {
+        color: #f7c59c;
+        position: relative;
+        top: 15vh;
+        left: 17.5vw;
+    }
+
+    .sign-up {
+        text-decoration: none;
+        font-weight: 600;
+        color: #92613A;
+        font-size: 1.3rem;
+    }
+}
+
+.right {
+    margin-top: 23vh;
+    position: relative;
+}
+
+.right img {
+    height: 50vh;
+    width: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.right-container1 {
+    position: absolute;
+    top: 7vh;
+    left: 5vw;
+    z-index: 1;
+    background-color: #FCE2CE;
+    height: 80vh;
+    width: 35vw;
+}
+
+.right-container2 {
+    position: absolute;
+    top: -20vh;
+    left: 5vw;
+    z-index: 0;
+    background-color: #FCE2CE;
+    height: 60vh;
+    width: 33vw;
+    border-radius: 50% 50% 0 0;
+}
+
+@media (max-width: 425px) {
+    .header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100vw;
+        height: 100vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .left {
+        h1 {
+            font-size: 2.5rem;
+            position: absolute;
+            top: 3vh;
+            z-index: 99;
+            margin-left: 10vw;
+            margin-bottom: 0;
+        }
+
+        .inputs {
+            margin-top: 40vh;
+            width: 100%;
+            max-width: none;
+            overflow: visible;
+            margin-left: 2vw;
+
+            .password,
+            .email {
+                margin: 0;
+                width: 90vw;
+                padding-left: 10vw;
+                border-radius: 3rem;
+            }
+        }
+
+        .eye {
+            top: 51vh;
+            padding-right: 5vw;
+            height: 20px;
+        }
+
+        .label-email {
+            top: 38vh;
+            width: 15vw;
+            font-size: 1rem;
+        }
+
+        .label-password {
+            top: 49vh;
+            width: 20vw;
+            font-size: 1rem;
+        }
+
+        .forgot-link {
+            left: 25vw;
+            font-size: 1.2rem;
+            top: -7vh;
+        }
+
+        button {
+            position: relative;
+            width: 90vw;
+            margin-left: 1rem;
+        }
+
+        .or {
+            left: 0vw;
+        }
+
+        .social-links {
+            left: 35vw;
+        }
+    }
+
+    .right {
+        margin-top: 0;
+        position: absolute;
+        top: 0;
+        margin-bottom: 5vh;
+
+        .right-container1 {
+            display: none;
+        }
+
+        .right-img {
+            height: 30vh;
+            width: auto;
+            position: relative;
+            z-index: 2;
+            top: 10vh;
+            
+        }
+
+        .right-container2 {
+            left: -7rem;
+            border-radius: 0 0 50% 50%;
+            width: 110vw;
+            top: -33vh;
+            z-index: 0;
+        }
+    }
+
+
+}
